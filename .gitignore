@@ -1,0 +1,27 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Rust build files
+/target/
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Local PostgreSQL backups
+*.dump
+*.backup
+*.sql.gz
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.swp
