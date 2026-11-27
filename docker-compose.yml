@@ -9,6 +9,7 @@ services:
       DATABASE_URL: ${NODE1_DATABASE_URL}
       NODE2_URL: http://node2:8002
       NODE3_URL: http://node3:8003
+      KEK: ${KEK}
     ports:
       - "8001:8001"
     depends_on:
@@ -25,6 +26,7 @@ services:
       NODE_ROLE: replica
       PORT: 8002
       DATABASE_URL: ${NODE2_DATABASE_URL}
+      KEK: ${KEK}
     ports:
       - "8002:8002"
     depends_on:
@@ -41,6 +43,7 @@ services:
       NODE_ROLE: replica
       PORT: 8003
       DATABASE_URL: ${NODE3_DATABASE_URL}
+      KEK: ${KEK}
     ports:
       - "8003:8003"
     depends_on:

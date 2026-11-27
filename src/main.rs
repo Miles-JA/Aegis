@@ -7,7 +7,7 @@ mod database;
 
 #[tokio::main]
 async fn main() {
-    dotenv::dotenv().ok();
+    let result = dotenv::dotenv().ok();
 
     let node_id = std::env::var("NODE_ID")
         .unwrap_or_else(|_| "unknown".to_string());

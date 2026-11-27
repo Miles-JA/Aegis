@@ -9,6 +9,7 @@ pub fn create_router(pool: PgPool) -> Router {
     Router::new()
         .route("/health", get(health::health_check))
         .route("/status", get(status::status))
-        .route("/secrets", post(secrets::secret))
+        .route("/secrets", post(secrets::post_secret))
+        .route("/secrets/{name}", get(secrets::get_secret))
         .with_state(pool)
 }
